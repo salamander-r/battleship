@@ -92,6 +92,8 @@ var view = {
   function init() {
     var fireButton = document.getElementById("fireButton");
     fireButton.onclick = handleFireButton;
+    var guessInput = document.getElementById("guessInput");
+    guessInput.onkeypress = handleKeyPress;
   }
 
   window.onload = init;
@@ -102,4 +104,12 @@ var view = {
     controller.proccesGuess(guess);
 
     guessInput.value = "";
+  }
+
+  function handleKeyPress(e) {
+    var fireButton = document.getElementById("fireButton");
+    if(e.keyCode === 13) {
+      fireButton.click();
+      return false;
+    }
   }
