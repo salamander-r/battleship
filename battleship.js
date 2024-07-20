@@ -135,22 +135,6 @@ var view = {
     return null;
   }
   
-  function handleFireButton() {
-    var guessInput = document.getElementById("guessInput");
-    var guess = guessInput.value;
-    controller.proccesGuess(guess);
-
-    guessInput.value = "";
-  }
-
-  function handleKeyPress(e) {
-    var fireButton = document.getElementById("fireButton");
-    if(e.keyCode === 13) {
-      fireButton.click();
-      return false;
-    }
-  }
-
   function init() {
     var fireButton = document.getElementById("fireButton");
     fireButton.onclick = handleFireButton;
@@ -159,5 +143,21 @@ var view = {
 
     model.generateShipLocations();
   }
+  
+  function handleFireButton() {
+    var guessInput = document.getElementById("guessInput");
+    var guess = guessInput.value;
+    controller.proccesGuess(guess);
+
+    guessInput.value = "";
+  }
 
   window.onload = init;
+
+  function handleKeyPress(e) {
+    var fireButton = document.getElementById("fireButton");
+    if(e.keyCode === 13) {
+      fireButton.click();
+      return false;
+    }
+  }
