@@ -28,6 +28,10 @@ var view = {
       for (var i = 0; i < this.numShips; i++) {
         var ship = this.ships[i];
         var locations = ship.locations;
+        var index = lcoations.indexOf(guess);
+        if (index >= 0) {
+          //We have a hit!
+        }
       }
     }
   }
