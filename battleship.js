@@ -88,20 +88,16 @@ var view = {
     }
     return null;
   }
-  /*
-  controller.proccesGuess("A0");
-
-  controller.proccesGuess("A6");
-  controller.proccesGuess("B6");
-  controller.proccesGuess("C6");
-
-  controller.proccesGuess("C4");
-  controller.proccesGuess("D4");
-  controller.proccesGuess("E4");
-
-  controller.proccesGuess("B0");
-  controller.proccesGuess("B1");
-  controller.proccesGuess("B2");
-  */
   
-  
+  function init() {
+    var fireButton = document.getElementById("fireButton");
+    fireButton.onclick = handleFireButton;
+  }
+
+  function handleFireButton() {
+    var guessInput = document.getElementById("guessInput");
+    var guess = guessInput.value;
+    controller.proccesGuess(guess);
+
+    guessInput.value = "";
+  }
