@@ -43,6 +43,7 @@ var view = {
       view.displayMessage("You missed.");
       return false;
     },
+    
     isSunk: function(ship) {
       for (var i = 0; i < this.shipLength; i++) {
         if (ship.hits[i] !== "hit") {
@@ -50,7 +51,38 @@ var view = {
         }
       }
       return true;
-    }
+    },
+
+    generateShipLocations: function() {
+        var locations;
+        for (var i = 0; i < this.numShips; i++) {
+          do {
+              locations = this.generateShip();
+          } while (this.colision(locations));
+          this.ships[i].locations = locations;
+        }
+    },
+
+    generateShip: function() {
+      var direction = Math.floor(Math.random() * 2);
+      var row;
+      var col;
+      if (direction === 1) {
+        // Generate a starting location for a vertical ship
+      } else {
+        // Generate a starting location for a vertical ship
+      }
+
+      var newShipLocations = [];
+      for (var i = 0; i < this.shipLength; i++) {
+        if (direction === 1) {
+          // add Location to array for new horizontal ship
+        } else {
+          // add Location to array for new vertical ship
+        }
+      }
+      return newShipLocations;
+    },
   }
 
   var controller = {
