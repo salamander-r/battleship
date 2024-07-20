@@ -66,3 +66,11 @@ var view = {
   model.fire("12");
   model.fire("11");
   model.fire("10");
+
+  var controller = {
+    gueses: 0,
+
+    proccesGuess: function(guess) {
+      // more code will go here
+    }
+  };
