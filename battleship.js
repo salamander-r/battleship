@@ -94,6 +94,8 @@ var view = {
     fireButton.onclick = handleFireButton;
   }
 
+  window.onload = init;
+
   function handleFireButton() {
     var guessInput = document.getElementById("guessInput");
     var guess = guessInput.value;
