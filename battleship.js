@@ -30,8 +30,10 @@ var view = {
         var locations = ship.locations;
         var index = lcoations.indexOf(guess);
         if (index >= 0) {
-          //We have a hit!
+          ship.hits[index] = "hit";
+          return true;
         }
       }
+      return false;
     }
   }
