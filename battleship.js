@@ -27,6 +27,7 @@ var view = {
     fire: function(guess) {
       for (var i = 0; i < this.numShips; i++) {
         var ship = this.ships[i];
+        var locations = ship.locations;
       }
     }
   }
