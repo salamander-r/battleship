@@ -68,7 +68,7 @@ var view = {
       var row;
       var col;
       if (direction === 1) {
-          row = Math.floor(Math.random() * this,boardSize);
+          row = Math.floor(Math.random() * this.boardSize);
           col = Math.floor(Math.random() * (this.boardSize - (this.shipLength + 1)));
       } else {
           row = Math.floor(Math.random() * (this.boardSize - (this.shipLength + 1)));
@@ -143,7 +143,7 @@ var view = {
 
     model.generateShipLocations();
   }
-  
+
   function handleFireButton() {
     var guessInput = document.getElementById("guessInput");
     var guess = guessInput.value;
