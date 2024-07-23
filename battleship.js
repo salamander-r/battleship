@@ -152,8 +152,6 @@ function handleFireButton() {
   guessInput.value = "";
 }
 
-window.onload = init;
-
 function handleKeyPress(e) {
   var fireButton = document.getElementById("fireButton");
   if(e.keyCode === 13) {
@@ -161,3 +159,5 @@ function handleKeyPress(e) {
     return false;
   }
 }
+
+window.onload = init;
