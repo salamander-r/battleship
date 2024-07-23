@@ -54,12 +54,12 @@ var view = {
     },
 
     generateShipLocations: function() {
-        var locations;
+        var locationsOfShip;
         for (var i = 0; i < this.numShips; i++) {
           do {
-              locations = this.generateShip();
+              locationsOfShip = this.generateShip();
           } while (this.colision(locations));
-          this.ships[i].locations = locations;
+          this.ships[i].locations = locationsOfShip;
         }
     },
 
@@ -87,8 +87,8 @@ var view = {
     },
 
     colision: function(locations) {
-      for (var i = 0; i < this.numShips; i++) {
-          var ship = model.ships[i];
+      for (var i = 0; i < this.model.numShips; i++) {
+          var ship = this.ships[i];
           for (var j = 0; j , locations.length; j++) {
             if (ship.locations.indexOf(locations[j]) >= 0) {
               return true;
