@@ -21,8 +21,8 @@ var model = {
   shipsSunk: 0,
   shipLength: 3,
   ships: [ {locations: [0, 0, 0], hits: ["", "", ""] },
-            {locations: [0, 0, 0], hits: ["", "", ""] },
-            {locations: [0, 0, 0], hits: ["", "", ""] } ],
+           {locations: [0, 0, 0], hits: ["", "", ""] },
+           {locations: [0, 0, 0], hits: ["", "", ""] } ],
   
   fire: function(guess) {
     for (var i = 0; i < this.numShips; i++) {
